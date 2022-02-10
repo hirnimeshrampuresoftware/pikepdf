@@ -8,6 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       CIBW_BUILD: "*-${{ matrix.platform }}"
+      QPDF_SOURCE_TREE: ~/src/qpdf
     strategy:
       matrix:
         os: [ubuntu-20.04]
