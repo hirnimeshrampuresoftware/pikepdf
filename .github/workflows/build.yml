@@ -9,6 +9,7 @@ jobs:
     env:
       CIBW_BUILD: "*-${{ matrix.platform }}"
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-20.04]
         platform: [manylinux_x86_64, manylinux_i686, manylinux_aarch64] # yet not doing musllinux_x86_64, i686 (dependency issues), manylinux_aarch64 (too expensive)
