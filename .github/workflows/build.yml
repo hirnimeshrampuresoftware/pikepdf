@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       CIBW_BUILD: "*-${{ matrix.platform }}"
-      QPDF_SOURCE_TREE: ~/src/qpdf
+      #QPDF_SOURCE_TREE: ~/src/qpdf
     strategy:
       fail-fast: false
       matrix:
