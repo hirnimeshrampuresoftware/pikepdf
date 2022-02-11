@@ -40,7 +40,7 @@ jobs:
         if: matrix.platform == 'manylinux_aarch64'
         env:
           CIBW_ARCHS_LINUX: aarch64
-          CIBW_SKIP: pp37-*
+          CIBW_SKIP: pp*
 
       - name: Upload built wheels
         uses: actions/upload-artifact@v2
