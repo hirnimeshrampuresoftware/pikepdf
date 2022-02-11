@@ -15,7 +15,7 @@ fi
 
 if [ ! -f /usr/local/lib/libqpdf.a ]; then
     pushd qpdf
-    if [[ $(uname -p) == 'aarch64' ]]; then
+    if [ `uname -m` == "aarch64" ]; then
         ./configure --disable-oss-fuzz && make install
     else
         ./configure --disable-oss-fuzz && make -j install
